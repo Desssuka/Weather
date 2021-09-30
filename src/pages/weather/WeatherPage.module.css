@@ -1,0 +1,99 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
+    font-size: 10vmin;
+    color: #86a813;
+}
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search input {
+    margin: 20px 0;
+    background: white;
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: #86a813 1px solid;
+    color: #000000;
+    transition: 0.5s ease;
+}
+.search input:focus::placeholder {
+    color: transparent;
+}
+.search input:focus {
+    border: black 1px solid;
+}
+.search input::placeholder {
+    color: rgba(0, 0, 0, 0.18);
+    transition: color 0.3s ease;
+}
+.search button {
+    border: none;
+    background: none;
+}
+
+.search svg {
+    color:#86a813;
+    width:3rem;
+    height:3rem;
+    transition: 0.2s ease;
+}
+.search svg:hover {
+    color:black;
+    width:3.5rem;
+    height:3.5rem;
+    transition: 0.2s ease;
+}
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    min-width: 30vw;
+    min-height: 3vw;
+    padding: 30px;
+    box-shadow: 1px 1px 8px 2px rgba(34, 60, 80, 0.2);
+    font-size: 2.5rem;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+.card:hover {
+    transition: 0.3s ease;
+    box-shadow: 1px 1px 16px 2px rgba(34, 60, 80, 0.2);
+}
+.link{
+    color: black;
+    text-decoration: none;
+}
+.card p {
+    margin: 0 10px
+}
+.full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+.cross svg {
+    color: rgba(0, 0, 0, 0.25);
+    height: 75px;
+    width: 75px;
+    transition: 0.3s ease;
+}
+.cross:hover svg {
+    transition: 0.3s ease;
+    color: rgba(0, 0, 0, 0.76);
+}
+.cross button {
+    border: none;
+    background: transparent;
+}

@@ -1,0 +1,78 @@
+.page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.03);
+    box-shadow: 1px 1px 16px 2px rgba(34, 60, 80, 0.2);
+    transition: 0.3s ease;
+}
+.card:hover {
+    box-shadow: 1px 1px 32px 2px rgba(34, 60, 80, 0.2);
+    transition: 0.3s ease;
+}
+.form {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.form input {
+    margin: 20px 0;
+    background: rgba(59, 56, 56, 0.01);
+    outline: none;
+    border: none;
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border: #86a813 1px solid;
+    color: #000000;
+    transition: 0.5s ease;
+}
+.form input:focus::placeholder {
+    color: transparent;
+}
+.form input:focus {
+    background: white;
+    border: black 1px solid;
+}
+.form input::placeholder {
+    color: rgba(0, 0, 0, 0.18);
+    transition: color 0.3s ease;
+}
+.loginBtn button {
+    border: #86a813 1px solid;
+    border-radius:5px;
+    font-size: 2rem;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.66);
+    font-weight: 700;
+    background: white;
+    transition: 0.3s ease;
+}
+.loginBtn:hover button {
+    border: black 1px solid;
+    transition: 0.3s ease;
+}
+.title {
+    color:black;
+    font-size: 3rem;
+    padding: 10px;
+    border-bottom: black;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+.error {
+    padding-bottom: 20px;
+}

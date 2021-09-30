@@ -1,0 +1,30 @@
+.header {
+    width: 100%;
+    background: #d2d901;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 4rem;
+    color:white;
+    padding: 10px 30px;
+    font-weight: 500;
+    letter-spacing: 15px;
+}
+.links {
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 40px;
+}
+.links a {
+    color: white;
+}
+
+.links svg {
+    width:3rem;
+    height:3rem;
+}

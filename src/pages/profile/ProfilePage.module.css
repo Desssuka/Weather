@@ -1,0 +1,33 @@
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
+    font-size: 10vmin;
+    margin-bottom: 20px;
+    color: #86a813;
+}
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.avatar img {
+    min-width: 300px;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 16px 2px rgba(34, 60, 80, 0.2);
+}
+.info {
+    margin-left: 50px;
+    font-size: 1.75rem;
+    box-shadow: 1px 1px 16px 2px rgba(34, 60, 80, 0.2);
+    border-radius: 10px;
+    padding: 20px 30px;
+}
+.infoTitle {
+    font-weight: 700;
+}
