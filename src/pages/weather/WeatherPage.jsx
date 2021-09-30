@@ -30,7 +30,6 @@ const WeatherPage = observer((props) => {
                     </button>
                 </div>
             </div>
-
         )
     })
     return (
