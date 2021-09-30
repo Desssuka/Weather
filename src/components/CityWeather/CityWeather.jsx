@@ -3,6 +3,7 @@ import {useLocation, withRouter} from 'react-router-dom'
 import weather from "../../store/weather";
 import {observer} from "mobx-react-lite";
 import s from './CityWeather.module.css'
+import ForecastCard from "../ForecastCard/ForecastCard";
 
 const CityWeather = observer((props) => {
     const state = useLocation().state || null
@@ -13,20 +14,10 @@ const CityWeather = observer((props) => {
     },[])
     const forecast = weather.currentCity.map((v)=>{
         return(
-            <div className={s.card}>
-                <div>
-                    <p>Weather - {v.weather}</p>
-                    <p>Day - {v.dayTemp}°C</p>
-                    <p>Night - {v.nightTemp}°C</p>
-                </div>
-                <div>
-                    <img src={`http://openweathermap.org/img/wn/${v.icon}@2x.png`} alt=""/>
-                    <p>Date - {v.day}</p>
-                </div>
-            </div>
+            <ForecastCard weather={v.weather} dayTemp={v.dayTemp} icon={v.icon}
+                          nightTemp={v.nightTemp} day={v.day}/>
         )
     })
-    console.log(forecast)
     return (
         <div className={s.page}>
             <div className={s.title}>{state.city}</div>
