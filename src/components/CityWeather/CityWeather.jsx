@@ -5,7 +5,7 @@ import {observer} from "mobx-react-lite";
 import s from './CityWeather.module.css'
 import ForecastCard from "../ForecastCard/ForecastCard";
 
-const CityWeather = observer((props) => {
+const CityWeather = observer(() => {
     const state = useLocation().state || null
     useEffect(() => {
         if(state){

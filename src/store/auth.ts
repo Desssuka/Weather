@@ -2,24 +2,20 @@ import {makeAutoObservable} from "mobx";
 
 
 class Auth {
-    username = "Admin"
-    password = "12345"
-    isAuth = false
-    showError = false
+    username: string = "Admin"
+    password: string = "12345"
+    isAuth: boolean = false
     constructor() {
         makeAutoObservable(this)
     }
-    login(login, password){
+    login(login?: string, password?: string){
         if(localStorage.getItem("isAuth")){
-            this.showError = false
-            return this.isAuth = true
+            this.isAuth = true
         }
         if(login === this.username && password === this.password){
-            this.showError = false
             this.isAuth = true
-            return localStorage.setItem("isAuth", "true")
+            localStorage.setItem("isAuth", "true")
         }
-        this.showError = true
     }
     logout(){
         this.isAuth = false

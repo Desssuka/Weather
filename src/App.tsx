@@ -1,5 +1,5 @@
-import s from './App.css';
-import React, {useEffect} from "react";
+import s from './App.module.css'
+import React, {FC, useEffect} from "react";
 import {Redirect, Route, Switch} from "react-router-dom";
 import MainPage from "./pages/main/MainPage";
 import LoginPage from "./pages/login/LoginPage";
@@ -8,7 +8,8 @@ import WeatherPage from "./pages/weather/WeatherPage";
 import Header from "./components/Header/Header";
 import auth from "./store/auth";
 
-function App() {
+const App: FC = () => {
+    //is user authorized check
     useEffect(() => {
         auth.login()
     }, [])

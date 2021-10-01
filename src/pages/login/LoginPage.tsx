@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import s from "./LoginPage.module.css"
-import auth from "./../../store/auth"
+import auth from "../../store/auth"
 import {observer} from "mobx-react-lite";
 import {Redirect} from "react-router-dom";
 
 const LoginPage = observer(() => {
-    const [login, setLogin] = useState('')
-    const [password, setPassword] = useState('')
-    const [showError, setShowError] = useState(false)
-    useEffect(()=>{
-    setShowError(false)
-    }, [login, password])
+    const [login, setLogin] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
+    const [showError, setShowError] = useState<boolean>(false)
+    //remove error on login/password change
+    useEffect(() => setShowError(false), [login, password])
+
     const pageEl = (auth.isAuth ? <Redirect to={"/"}/> : <div className={s.page}>
         <div className={s.card}>
             <div className={s.title}>

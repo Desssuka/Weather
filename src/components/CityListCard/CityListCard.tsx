@@ -1,9 +1,19 @@
-import React from 'react';
+import React, {FC} from 'react';
 import weather from "../../store/weather";
 import s from "../../pages/weather/WeatherPage.module.css";
 import {NavLink} from "react-router-dom";
 
-const CityListCard = ({id, lat, lon, city, cityWeather, temperature, icon}) => {
+interface CityListCardProps {
+    id: number,
+    lat: number,
+    lon: number,
+    city: string,
+    cityWeather: string,
+    temperature: number,
+    icon: string
+}
+
+const CityListCard: FC<CityListCardProps> = ({id, lat, lon, city, cityWeather, temperature, icon}) => {
     return (
         <div className={s.full}>
             <NavLink className={s.link}

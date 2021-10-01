@@ -1,8 +1,6 @@
 import React from 'react';
-import s from './WeatherPage.module.css'
-import weather from "../../store/weather";
 import {observer} from "mobx-react-lite";
-import {NavLink, withRouter} from "react-router-dom";
+import {withRouter} from "react-router-dom";
 import CitiesList from "../../components/CitiesList/CitiesList";
 import CityWeather from "../../components/CityWeather/CityWeather";
 

@@ -1,21 +1,23 @@
-import React, {useEffect, useState} from 'react';
-import {geolocated} from "react-geolocated";
+import React, {FC, useEffect, useState} from 'react';
+import {geolocated, GeolocatedProps} from "react-geolocated";
 import weather from "../../store/weather";
 import {observer} from "mobx-react-lite";
 import s from './MainPage.module.css'
 
-const MainPage = observer((props) => {
-    const [lat, setLat] = useState(null)
-    const [lon, setLon] = useState(null)
+const MainPage: FC<GeolocatedProps> = observer((props) => {
+    const [lat, setLat] = useState(0)
+    const [lon, setLon] = useState(0)
     const [status, setStatus] = useState("Loading")
-    useEffect(()=> {
-        navigator.geolocation.getCurrentPosition((position)=>{
+    //getting current user's geolocation
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition((position) => {
             setLat(position.coords.latitude)
             setLon(position.coords.longitude)
             setStatus('Loaded')
         })
-    },[])
-    useEffect(()=>{
+    }, [])
+    //setting user's city
+    useEffect(() => {
         weather.getCurrentUserWeather(lat, lon)
     }, [status])
 
@@ -35,7 +37,7 @@ const MainPage = observer((props) => {
                     <p>{weather.userCity.city}</p>
                     <p>Today's weather - {weather.userCity.weather}</p>
                     <p>Today's temperature - {weather.userCity.temperature}°C</p>
-                </div> )}
+                </div>)}
 
             </div>
         ) : (

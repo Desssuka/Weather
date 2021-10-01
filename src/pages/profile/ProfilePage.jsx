@@ -1,5 +1,5 @@
 import React from 'react';
-import auth from './../../store/auth'
+import auth from '../../store/auth'
 import {Redirect} from "react-router-dom";
 import s from './ProfilePage.module.css'
 

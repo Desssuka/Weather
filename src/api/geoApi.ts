@@ -5,12 +5,12 @@ const instance = axios.create({
     baseURL: 'http://api.openweathermap.org/data/2.5/'
 })
 
-export const getCurrentUserWeather = (lat, lon) => {
+export const getCurrentUserWeather = (lat:number, lon:number) => {
     return instance.get(`weather?lat=${lat}&lon=${lon}&appid=${APIkey}`, {})
 }
-export const getCurrentCityWeather = (city) => {
+export const getCurrentCityWeather = (city:string) => {
     return instance.get(`weather?q=${city}&appid=${APIkey}`, {})
 }
-export const getSevenDaysForecast = (lat, lon) => {
+export const getSevenDaysForecast = (lat:number, lon:number) => {
     return instance.get(`onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely,current&units=metric&appid=${APIkey}`, {})
 }
